@@ -49,6 +49,7 @@ public class UserServiceImpl implements UserService {
         user.setEmail(registerDto.getEmail());
         user.setName(registerDto.getName());
         user.setMobileNo(registerDto.getMobileNo());
+        user.setTodayReferralBalance(0.00f);
         if (!registerDto.getReferralId().isEmpty())user.setTodayReferralBalance(0.00f);
 
         user.setReferralId(registerDto.getReferralId().isEmpty() ? "NO_REFERRAL_ID" : registerDto.getReferralId());
