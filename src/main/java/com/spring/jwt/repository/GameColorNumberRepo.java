@@ -92,4 +92,31 @@ public interface GameColorNumberRepo extends JpaRepository<GameColorNumber, Inte
     @Query("SELECT g FROM GameColorNumber g WHERE " +
             "(:winStatus IS NULL OR g.winStatus = :winStatus)")
     List<GameColorNumber> findAllWinStatus(Boolean winStatus);
+
+    @Query(value = "SELECT SUM(g.amount) as totalAmount FROM GameColorNumber g WHERE g.o_ne = :status AND g.winStatus = FALSE",nativeQuery = false )
+    Integer findByO(@Param("status") Boolean status);
+    @Query(value = "SELECT SUM(g.amount) as totalAmount FROM GameColorNumber g WHERE g.t_wo = :status AND g.winStatus = FALSE",nativeQuery = false )
+    Integer findByT(@Param("status") Boolean status);
+    @Query(value = "SELECT SUM(g.amount) as totalAmount FROM GameColorNumber g WHERE g.t_hree = :status AND g.winStatus = FALSE",nativeQuery = false )
+    Integer findByTh(@Param("status") Boolean status);
+    @Query(value = "SELECT SUM(g.amount) as totalAmount FROM GameColorNumber g WHERE g.f_our = :status AND g.winStatus = FALSE",nativeQuery = false )
+    Integer findByFo(@Param("status") Boolean status);
+    @Query(value = "SELECT SUM(g.amount) as totalAmount FROM GameColorNumber g WHERE g.f_ive = :status AND g.winStatus = FALSE",nativeQuery = false )
+    Integer findByFi(@Param("status") Boolean status);
+    @Query(value = "SELECT SUM(g.amount) as totalAmount FROM GameColorNumber g WHERE g.s_ix = :status AND g.winStatus = FALSE",nativeQuery = false )
+    Integer findBySi(@Param("status") Boolean status);
+    @Query(value = "SELECT SUM(g.amount) as totalAmount FROM GameColorNumber g WHERE g.s_even = :status AND g.winStatus = FALSE",nativeQuery = false )
+    Integer findBySe(@Param("status") Boolean status);
+    @Query(value = "SELECT SUM(g.amount) as totalAmount FROM GameColorNumber g WHERE g.e_ight = :status AND g.winStatus = FALSE",nativeQuery = false )
+    Integer findByEi(@Param("status") Boolean status);
+    @Query(value = "SELECT SUM(g.amount) as totalAmount FROM GameColorNumber g WHERE g.n_ine = :status AND g.winStatus = FALSE",nativeQuery = false )
+    Integer findByNi(@Param("status") Boolean status);
+    @Query(value = "SELECT SUM(g.amount) as totalAmount FROM GameColorNumber g WHERE g.t_en = :status AND g.winStatus = FALSE",nativeQuery = false )
+    Integer findByTe(@Param("status") Boolean status);
+    @Query(value = "SELECT SUM(g.amount) as totalAmount FROM GameColorNumber g WHERE g.e_leven = :status AND g.winStatus = FALSE",nativeQuery = false )
+    Integer findByEl(@Param("status") Boolean status);
+    @Query(value = "SELECT SUM(g.amount) as totalAmount FROM GameColorNumber g WHERE g.t_welve = :status AND g.winStatus = FALSE",nativeQuery = false )
+    Integer findByTwEl(@Param("status") Boolean status);
+
+
 }

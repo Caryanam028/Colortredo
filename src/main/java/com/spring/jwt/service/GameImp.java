@@ -109,6 +109,54 @@ public class GameImp implements IGame {
             gameColorNumber.setType("_COLOR_");
             gameColorNumber.setYellow(true);
 
+        }else if (colorOrNumber.equals("_1_")){
+            gameColorNumber.setType("_THINGNUMBER_");
+            gameColorNumber.setO_ne(true);
+
+        }else if (colorOrNumber.equals("_2_")){
+            gameColorNumber.setType("_THINGNUMBER_");
+            gameColorNumber.setT_wo(true);
+
+        }else if (colorOrNumber.equals("_3_")){
+            gameColorNumber.setType("_THINGNUMBER_");
+            gameColorNumber.setT_hree(true);
+
+        }else if (colorOrNumber.equals("_4_")){
+            gameColorNumber.setType("_THINGNUMBER_");
+            gameColorNumber.setF_our(true);
+
+        }else if (colorOrNumber.equals("_5_")){
+            gameColorNumber.setType("_THINGNUMBER_");
+            gameColorNumber.setF_ive(true);
+
+        }else if (colorOrNumber.equals("_6_")){
+            gameColorNumber.setType("_THINGNUMBER_");
+            gameColorNumber.setS_ix(true);
+
+        }else if (colorOrNumber.equals("_7_")){
+            gameColorNumber.setType("_THINGNUMBER_");
+            gameColorNumber.setE_ight(true);
+
+        }else if (colorOrNumber.equals("_8_")){
+            gameColorNumber.setType("_THINGNUMBER_");
+            gameColorNumber.setE_ight(true);
+
+        }else if (colorOrNumber.equals("_9_")){
+            gameColorNumber.setType("_THINGNUMBER_");
+            gameColorNumber.setN_ine(true);
+
+        }else if (colorOrNumber.equals("_10_")){
+            gameColorNumber.setType("_THINGNUMBER_");
+            gameColorNumber.setT_en(true);
+
+        }else if (colorOrNumber.equals("_11_")){
+            gameColorNumber.setType("_THINGNUMBER_");
+            gameColorNumber.setE_leven(true);
+
+        }else if (colorOrNumber.equals("_12_")){
+            gameColorNumber.setType("_THINGNUMBER_");
+            gameColorNumber.setT_welve(true);
+
         }else {
             throw new RuntimeException("type or color or number is not valid input");
         }
@@ -139,6 +187,7 @@ public class GameImp implements IGame {
                     .period(i)
                     .wonNumber(-1)
                     .wonColor(-1)
+                    .WonTNumber(-1)
                     .dateTime(LocalDateTime.now())
                     .build();
 
@@ -181,6 +230,7 @@ public class GameImp implements IGame {
                 .period(Long.valueOf(formattedDateTime))
                 .wonNumber(-1)
                 .wonColor(-1)
+                .WonTNumber(-1)
                 .dateTime(LocalDateTime.now())
                 .build();
         chartTrendRepo.save(chartTrendNew);
@@ -224,6 +274,20 @@ public class GameImp implements IGame {
         Integer seven =gameColorNumberRepo.findBySeven(true);
         Integer eight =gameColorNumberRepo.findByEight(true);
         Integer nine =gameColorNumberRepo.findByNine(true);
+
+
+        Integer o_ne =gameColorNumberRepo.findByO(true);
+        Integer t_wo =gameColorNumberRepo.findByT(true);
+        Integer t_hree =gameColorNumberRepo.findByTh(true);
+        Integer f_our =gameColorNumberRepo.findByFo(true);
+        Integer f_ive =gameColorNumberRepo.findByFi(true);
+        Integer s_ix =gameColorNumberRepo.findBySi(true);
+        Integer s_even =gameColorNumberRepo.findBySe(true);
+        Integer e_ight =gameColorNumberRepo.findByEi(true);
+        Integer n_ine =gameColorNumberRepo.findByNi(true);
+        Integer t_en =gameColorNumberRepo.findByTe(true);
+        Integer e_leven =gameColorNumberRepo.findByEi(true);
+        Integer t_welve =gameColorNumberRepo.findByTwEl(true);
 
         Boolean flag = true;
         // // System.out.println(nine);

@@ -25,6 +25,8 @@ public class ChartTrend {
 
     @Column(name = "WonColor", nullable = false, columnDefinition = "INTEGER")
     private Integer wonColor;
+    @Column(name = "WonTNumber", nullable = false, columnDefinition = "INTEGER")
+    private Integer WonTNumber;
 
     @Column(name = "WonDateTime", nullable = false, columnDefinition = "TIMESTAMP")
     private LocalDateTime dateTime;

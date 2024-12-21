@@ -34,6 +34,35 @@ public class GameColorNumber {
     @Column(name = "Yellow", nullable = false, columnDefinition = "BOOLEAN")
     private Boolean yellow;
 
+
+
+    @Column(name = "o_ne", nullable = false, columnDefinition = "BOOLEAN")
+    private Boolean o_ne;
+
+    @Column(name = "t_wo", nullable = false, columnDefinition = "BOOLEAN")
+    private Boolean t_wo;
+    @Column(name = "t_hree", nullable = false, columnDefinition = "BOOLEAN")
+    private Boolean t_hree;
+    @Column(name = "f_our", nullable = false, columnDefinition = "BOOLEAN")
+    private Boolean f_our;
+    @Column(name = "f_ive", nullable = false, columnDefinition = "BOOLEAN")
+    private Boolean f_ive;
+    @Column(name = "s_ix", nullable = false, columnDefinition = "BOOLEAN")
+    private Boolean s_ix;
+    @Column(name = "s_even", nullable = false, columnDefinition = "BOOLEAN")
+    private Boolean s_even;
+    @Column(name = "e_ight", nullable = false, columnDefinition = "BOOLEAN")
+    private Boolean e_ight;
+    @Column(name = "n_ine", nullable = false, columnDefinition = "BOOLEAN")
+    private Boolean n_ine;
+    @Column(name = "t_en", nullable = false, columnDefinition = "BOOLEAN")
+    private Boolean t_en;
+    @Column(name = "e_leven", nullable = false, columnDefinition = "BOOLEAN")
+    private Boolean e_leven;
+    @Column(name = "t_welve", nullable = false, columnDefinition = "BOOLEAN")
+    private Boolean t_welve;
+
+
     @Column(name = "Zero", nullable = false, columnDefinition = "BOOLEAN")
     private Boolean zero;
 
